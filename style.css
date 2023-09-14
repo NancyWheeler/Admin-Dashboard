@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Noto+Sans+Math&display=swap');
+
+body {
+    font-family: 'Lato', Helvetica, sans-serif;
+    padding: 0vh;
+    margin: 0vh;
+}
+
+.container {
+    display: flex;
+    background-color: #020617;
+    width: 100%;
+    height: 100vh;
+}
+
+.container > .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    min-height: 450px;
+}
+
+.sidebar {
+    width: 16vw;
+    min-width: 215px;
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    color: #e0e7ff;
+    margin: 0.5vh;
+}
+
+.sidebar .item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10px, 1.4vh, 2vh);
+}
+
+.sidebar .home {
+    font-size: clamp(12px, 1.6vh, 3vh);
+    text-shadow: 0 0 0.2rem #e0e7ff;
+    background-color: #3730a3;
+    border-radius: 5vh;
+    margin: 10px;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: #e0e7ff;
+}
+
+.item > .sidebar-link:hover {
+    color: #818cf8;
+}
+
+.sidebar .icon {
+    width: clamp(25px, 2vh, 3vh);
+    height: clamp(25px, 2vh, 3vh);
+    padding-right: 3vw;
+    justify-self: end;
+}
+
+.home .icon {
+    width: clamp(35px, 3.5vh, 4vh);
+    height: clamp(35px, 3.5vh, 4vh);
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    height: 15vh;
+    min-width: 300px;
+    min-height: 180px;
+    margin: 0.5vh 0.5vh 0.1vh 0.5vh;
+    border: 2px solid #4f46e5;
+    border-radius: 2vh 2vh 0 0;
+    background-color: #4f46e5; 
+    padding: 1.5vh;
+    color: #e0e7ff;
+    overflow: hidden;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.top input {
+    grid-area: 1 / 2 / 2 / 6;
+    width: 40vw;
+    height: 2.5vh;
+    min-width: 50px;
+    min-height: 15px;
+    border: 1px solid #a5b4fc;
+    box-shadow: 1.5px 1.5px 1px 1px #1e1b4b;
+    border-radius: 10vh;
+    background-color: #eef2ff;
+}
+
+.top .icon {
+    width: clamp(30px, 1.5vh, 2.5vh);
+    height: clamp(30px, 1.5vh, 2.5vh);
+    justify-self: end;
+}
+
+.top .icon:first-child {
+    padding-right: 1vw;
+}
+
+.profile {
+    grid-area: 1 / 7 / 2 / 9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: clamp(10px, 1.5vh, 2vh);
+}
+
+.profile .icon:nth-child(2) {
+    width: clamp(70px, 3vh, 5vh);
+    height: clamp(70px, 3vh, 5vh);
+    border: 1px solid #818cf8;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1.5px 1.5px 1px 1px #1e1b4b;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom > .left {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom > .left .icon {
+    width: clamp(80px, 10vh, 20vh);
+    height: clamp(80px, 10vh, 20vh);
+    border: 1px solid #818cf8;
+    border-radius: 50%;
+    margin-right: 1.5vw;
+    overflow: hidden;
+    box-shadow: 1.5px 1.5px 1px 1px #1e1b4b;
+}
+
+.greeting {
+    font-size: clamp(15px, 2.5vh, 5vh);
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting p:nth-child(1) {
+    font-size: clamp(10.5px, 1.35vh, 2.5vh);
+}
+
+.bottom > .right {
+    grid-area: 1 / 5 / 2 / 7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom > .right a {
+    margin: 1vh 1vh 1vh 5vh;
+    padding: 1vh 2vh 1vh 2vh;
+    background-color: #020617;
+    border-radius: 10vh;
+    color: #e0e7ff;
+    font-size: clamp(10px, 1.3vh, 1.5vh);
+    text-decoration: none;
+    transition: 0.35s background-color;
+}
+
+.bottom > .right a:hover {
+    background-color: #c7d2fe;
+    color: #1e1b4b;
+}
+
+.bottom>.right a:active {
+    background-color: #1e1b4b;
+    color: #e0e7ff;
+}
+
+.main-content {
+    flex: 1;
+    margin: 0.1vh 0.5vh 0.5vh 0.5vh;
+    border: 2px solid #e0e7ff;
+    border-radius: 0 0 2vh 2vh;
+    background-color: #e0e7ff;
+    color: #1e1b4b;
+    padding: 1.5vh;
+}
